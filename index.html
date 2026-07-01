@@ -52,18 +52,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   
   <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
   <title>MotionPyramid: Controllable Motion Synthesis via Stylized Phase Manifolds</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -82,9 +76,6 @@
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -145,7 +136,7 @@
     "image": "https://lee-abcde.github.io/MotionPyramid_web/static/images/carousel1.jpg",
     "keywords": ["MotionPyramid", "controllable motion synthesis", "stylized phase manifolds", "motion generation", "character animation", "computer graphics"],
     "abstract": "We introduce stylized phase manifolds, a compact, interpretable latent representation that disentangles motion content, temporal structure, and style. Building on this representation, we develop a diffusion-based motion generator that enables fine-grained control over semantic, temporal, and stylistic aspects of motion.",
-    "citation": "Li et al., MotionPyramid: Controllable Motion Synthesis via Stylized Phase Manifolds. SCA 2026, Computer Graphics Forum.",
+    "citation": "Li et al., MotionPyramid: Controllable Motion Synthesis via Stylized Phase Manifolds. Computer Graphics Forum (Proceedings of SCA 2026).",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
@@ -171,8 +162,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ETH Zurich",
-    "url": "https://ethz.ch",
-    "logo": "https://lee-abcde.github.io/MotionPyramid_web/static/images/favicon.ico"
+    "url": "https://ethz.ch"
   }
   </script>
 </head>
@@ -185,37 +175,32 @@
   </button>
 
   <main id="main-content">
-  <section class="hero">
+  <section class="hero publication-hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">MotionPyramid: Controllable Motion Synthesis via Stylized Phase Manifolds</h1>
+            <h1 class="title is-1 publication-title"><span class="title-emphasis">MotionPyramid</span>: <span class="title-subtitle">Controllable Motion Synthesis via Stylized Phase Manifolds</span></h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a>Jingyuan Li</a><sup>1</sup>,
+                <a href="https://lee-abcde.github.io/" target="_blank">Jingyuan Li</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a>Peizhuo Li</a><sup>1</sup>,
+                <a href="https://peizhuoli.github.io/" target="_blank">Peizhuo Li</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a>Andreas Aristidou</a><sup>2,3</sup>,
+                <a href="https://andreasaristidou.com/" target="_blank">Andreas Aristidou</a><sup>2,3</sup>,
               </span>
               <span class="author-block">
-                <a>Olga Sorkine-Hornung</a><sup>1</sup>
+                <a href="https://igl.ethz.ch/people/sorkine/" target="_blank">Olga Sorkine-Hornung</a><sup>1</sup>
               </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>ETH Zurich, Switzerland; <sup>2</sup>University of Cyprus, Cyprus; <sup>3</sup>CYENS Centre of Excellence, Cyprus<br><span class="publication-venue-highlight">SCA 2026, Computer Graphics Forum</span></span>
+                    <span class="author-block"><sup>1</sup>ETH Zurich, Switzerland; <sup>2</sup>University of Cyprus, Cyprus; <sup>3</sup>CYENS Centre of Excellence, Cyprus<br><br><span class="publication-venue-highlight">Computer Graphics Forum (Proceedings of SCA 2026)</span></span>
                   </div>
 
-                  <div class="institution-logos" aria-label="Institution logos">
-                    <img src="static/images/eth_logo.png" alt="ETH Zurich logo" loading="lazy">
-                    <img src="static/images/ucy_logo.png" alt="University of Cyprus logo" loading="lazy">
-                  </div>
-
-                  <div class="column has-text-centered">
+                  <div class="column has-text-centered publication-link-column">
                     <div class="publication-links">
                          <!-- TODO: Update with your paper PDF -->
                       <span class="link-block">
@@ -240,6 +225,11 @@
                 </span>
             </div>
           </div>
+
+                  <div class="institution-logos" aria-label="Institution logos">
+                    <img src="static/images/eth_logo.png" alt="ETH Zurich logo" loading="lazy">
+                    <img src="static/images/ucy_logo.png" alt="University of Cyprus logo" loading="lazy">
+                  </div>
         </div>
       </div>
     </div>
@@ -263,8 +253,8 @@
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+    <div class="columns is-vcentered abstract-layout">
+      <div class="column abstract-text-column">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
@@ -272,6 +262,9 @@
             We introduce stylized phase manifolds, a compact, interpretable latent representation that disentangles motion content (e.g., "jumping", "walking"), the temporal structure (e.g., motion cycle frequency, gait timing), and style (i.e., how the motion is performed). Learned in an unsupervised manner and inherently low-dimensional, the manifold offers intuitive and flexible editing. Building on this representation, we develop a diffusion-based motion generator that enables fine-grained control over semantic, temporal, and stylistic aspects of motion. To connect high-level intent with low-level motion, we treat the stylized manifold as an intermediate representation, a structured bridge between natural language and motion. By first mapping text into this manifold, our two-stage pipeline improves control over text-based motion generation, while producing high-quality, diverse motion outputs.
           </p>
         </div>
+      </div>
+      <div class="column abstract-image-column has-text-centered">
+        <img class="abstract-figure" src="static/images/fig1.png" alt="Stylized manifold overview" loading="lazy"/>
       </div>
     </div>
   </div>
@@ -283,11 +276,8 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Stylized Manifold</h2>
+      <h2 class="title is-3 has-text-centered">Stylized Manifold</h2>
       <div id="results-carousel" class="carousel results-carousel figure-carousel">
-       <div class="item">
-        <img src="static/images/fig1.png" alt="MotionPyramid result figure 1" loading="lazy"/>
-      </div>
       <div class="item">
         <img src="static/images/fig2.png" alt="MotionPyramid result figure 2" loading="lazy"/>
       </div>
@@ -304,7 +294,7 @@
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Motion Editing and Control</h2>
+      <h2 class="title is-3 has-text-centered">Motion Editing and Control</h2>
       <div id="additional-figures-carousel" class="carousel results-carousel figure-carousel">
        <div class="item">
         <img src="static/images/fig4.png" alt="MotionPyramid result figure 4" loading="lazy"/>
@@ -329,7 +319,7 @@
 
 <!-- Acknowledgements -->
 <section class="section">
-  <div class="container is-max-desktop content">
+  <div class="container is-max-desktop content has-text-centered">
     <h2 class="title is-3">Acknowledgements</h2>
     <p>
       This work was supported in part by the European Research Council (ERC) under the European Union's Horizon 2020 Research and Innovation Programme (ERC Consolidator Grant, agreement No. 101003104, MYCLOTH) and by the EU Commission's Horizon Europe program (grant No. 101178362). Open access publishing was facilitated by ETH Zurich, as part of the Wiley-ETH Zurich agreement via the Consortium Of Swiss Academic Libraries.
@@ -337,25 +327,6 @@
   </div>
 </section>
 <!-- End acknowledgements -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
 <!-- Statcounter tracking code -->
   

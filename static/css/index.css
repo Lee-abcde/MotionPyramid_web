@@ -1,4 +1,28 @@
 /* Modern CSS Variables for consistent theming */
+@font-face {
+  font-family: 'Linux Biolinum';
+  src: url('../fonts/linux-biolinum/LinBiolinum.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Linux Biolinum';
+  src: url('../fonts/linux-biolinum/LinBiolinumB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Linux Biolinum';
+  src: url('../fonts/linux-biolinum/LinBiolinumI.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --primary-color: #2563eb;
   --primary-hover: #1d4ed8;
@@ -31,7 +55,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Linux Biolinum', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text-primary);
   line-height: 1.6;
   font-size: 16px;
@@ -84,6 +108,16 @@ body {
     margin: 8px 4px;
 }
 
+.publication-link-column {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.publication-link-column .link-block a {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .dnerf {
   font-variant: small-caps;
 }
@@ -105,23 +139,49 @@ body {
   padding: 4rem 1.5rem;
 }
 
+.publication-hero .hero-body {
+  padding-bottom: 0.5rem;
+}
+
 .teaser .hero-body {
-  padding-top: 2rem;
+  padding-top: 0.1rem;
   padding-bottom: 4rem;
 }
 
 .teaser {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Linux Biolinum', sans-serif;
 }
 
 
 /* Publication Content Styling */
 .publication-title {
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Linux Biolinum', sans-serif !important;
     font-weight: 800 !important;
     color: var(--text-primary) !important;
     margin-bottom: 2rem !important;
     line-height: 1.1 !important;
+}
+
+.publication-title .title-emphasis {
+    display: inline-block;
+    font-weight: 900;
+    color: var(--publication-highlight-color) !important;
+}
+
+.publication-title .title-subtitle {
+    font-size: 0.88em;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .publication-title .title-emphasis {
+      color: transparent !important;
+      background-image: linear-gradient(120deg, #2f3a24 0%, #6f7f47 45%, #a7b37a 100%) !important;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+  }
 }
 
 .publication-banner {
@@ -148,7 +208,7 @@ body {
 }
 
 .publication-authors {
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Linux Biolinum', sans-serif !important;
     font-weight: 500;
     margin-bottom: 1.5rem;
 }
@@ -212,7 +272,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  margin: 1rem 0 0.5rem;
+  margin: 0 0 0.5rem;
 }
 
 .institution-logos img {
@@ -343,7 +403,7 @@ body {
 
 /* Section Titles */
 .title.is-3 {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Linux Biolinum', sans-serif !important;
   font-weight: 700 !important;
   color: var(--text-primary);
   margin-bottom: 2rem !important;
@@ -359,7 +419,7 @@ body {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: var(--gradient-accent);
+  background: var(--border-color);
   border-radius: 2px;
 }
 
@@ -372,6 +432,26 @@ body {
 
 .content.has-text-justified p {
   margin-bottom: 1.5rem;
+}
+
+.abstract-layout .title.is-3::after {
+  left: 0;
+  transform: none;
+}
+
+.abstract-text-column {
+  flex: 1 1 0;
+}
+
+.abstract-image-column {
+  flex: 0 0 350px;
+}
+
+.abstract-figure {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: var(--border-radius);
 }
 
 /* Footer Improvements */
@@ -509,7 +589,7 @@ code {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Linux Biolinum', sans-serif;
 }
 
 .more-works-btn:hover {
@@ -687,6 +767,23 @@ code {
   .content.has-text-justified {
     font-size: 1rem;
   }
+
+  .abstract-layout .title.is-3 {
+    text-align: center;
+  }
+
+  .abstract-layout .title.is-3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .abstract-image-column {
+    flex: auto;
+  }
+
+  .abstract-figure {
+    max-width: 300px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -781,5 +878,3 @@ a:focus {
     box-shadow: none !important;
   }
 }
-
-
