@@ -255,7 +255,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-vcentered abstract-layout">
       <div class="column abstract-text-column">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3 has-text-centered">Abstract</h2>
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
@@ -272,45 +272,85 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- Stylized manifold -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Stylized Manifold</h2>
-      <div id="results-carousel" class="carousel results-carousel figure-carousel">
-      <div class="item">
-        <img src="static/images/fig2.png" alt="MotionPyramid result figure 2" loading="lazy"/>
+      <div id="stylized-manifold-carousel" class="carousel results-carousel figure-carousel manifold-carousel">
+        <div class="item">
+          <figure class="single-figure-block">
+            <div class="single-figure">
+              <img src="static/images/manifold1.png" alt="Stylized phase manifold architecture" loading="lazy"/>
+            </div>
+            <figcaption class="figure-caption">
+              A motion sequence is encoded into a latent representation, split into timing and style components, and reconstructed through phase parameters estimated from frequency, pivot phase, and codebook amplitude.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="item">
+          <div class="figure-grid manifold-comparison-grid">
+            <figure>
+              <img src="static/images/manifold2.png" alt="Stylized phase manifold visualization" loading="lazy"/>
+              <figcaption>
+                Visualization of our stylized manifold.
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="static/images/fig3.png" alt="MotionPyramid stylized manifold" loading="lazy"/>
+              <figcaption>
+                Average poses. Our manifold groups semantically similar motions into the same circle, the sub-manifold corresponding to a constant amplitude, while disentangling a continuous, temporally invariant style attribute in an unsupervised manner.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
-      <div class="item">
-        <img src="static/images/fig3.png" alt="MotionPyramid result figure 3" loading="lazy"/>
-     </div>
+    </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
+<!-- End stylized manifold -->
 
-<!-- Additional figures -->
+<!-- Diffusion pipeline -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3 has-text-centered">Motion Editing and Control</h2>
-      <div id="additional-figures-carousel" class="carousel results-carousel figure-carousel">
-       <div class="item">
-        <img src="static/images/fig4.png" alt="MotionPyramid result figure 4" loading="lazy"/>
+      <h2 class="title is-3 has-text-centered">Diffusion Pipeline</h2>
+      <div class="single-figure">
+        <img src="static/images/fig2.png" alt="MotionPyramid diffusion pipeline" loading="lazy"/>
       </div>
-      <div class="item">
-        <img src="static/images/fig5.png" alt="MotionPyramid result figure 5" loading="lazy"/>
-      </div>
-      <div class="item">
-        <img src="static/images/fig6.png" alt="MotionPyramid result figure 6" loading="lazy"/>
-      </div>
-      <div class="item">
-        <img src="static/images/fig7.png" alt="MotionPyramid result figure 7" loading="lazy"/>
-      </div>
+      <p class="figure-caption">
+        Text to phase maps a prompt to manifold embeddings and trajectories that support reconfiguration operations such as concatenation, repetition, deletion, and permutation. Phase to motion then synthesizes motion from the edited embeddings and trajectory, aligning semantic, timing, stylistic, and spatial constraints.
+      </p>
+    </div>
   </div>
-</div>
-</div>
+</section>
+<!-- End diffusion pipeline -->
+
+<!-- Additional figures -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Motion Editing and Control</h2>
+      <div class="figure-grid">
+        <figure>
+          <img src="static/images/fig5.png" alt="MotionPyramid result figure 5" loading="lazy"/>
+          <figcaption><span class="caption-label">Trajectory control:</span> for the same manifold embedding, motions preserve content while following user-specified trajectories.</figcaption>
+        </figure>
+        <figure>
+          <img class="crop-left-edge" src="static/images/fig6.png" alt="MotionPyramid result figure 6" loading="lazy"/>
+          <figcaption><span class="caption-label">Reconfiguration:</span> walking embeddings can be repeated, shortened, and concatenated with a climbing phase.</figcaption>
+        </figure>
+        <figure>
+          <img class="crop-left-edge" src="static/images/fig7.png" alt="MotionPyramid result figure 7" loading="lazy"/>
+          <figcaption><span class="caption-label">Phase warping:</span> changing phase frequency compresses or stretches motion cycles while keeping motion plausible.</figcaption>
+        </figure>
+        <figure>
+          <img src="static/images/fig8.png" alt="MotionPyramid result figure 8" loading="lazy"/>
+          <figcaption><span class="caption-label">Style shift:</span> for the same phase embedding, the style code increases from left to right, changing how the motion is executed without changing its content.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- End additional figures -->
 
